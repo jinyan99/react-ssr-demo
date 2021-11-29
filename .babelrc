@@ -1,0 +1,4 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],// 这两个东西都是为babel-loader服务的，让babelloader转化js的时候预置这两个插件
+  "plugins":["react-hot-loader/babel"]// 配合react-hot-loader使用的babel插件
+}

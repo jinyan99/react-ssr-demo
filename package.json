@@ -1,0 +1,35 @@
+{
+  "name": "react-ssr-demo",
+  "version": "1.0.0",
+  "description": "> 参考 [github项目](https://github.com/yjdjiayou/react-ssr-demo)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:client": "webpack --config webpack.client.config.js",
+    "dev:client": "webpack-dev-server webpack.client.config.js",
+    "build": "npm run build:client && npm run build:server",
+    "build:server": "webpack --config webpack.server.config.js",
+    "start":"node ./src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinyan99/react-ssr-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinyan99/react-ssr-demo/issues"
+  },
+  "homepage": "https://github.com/jinyan99/react-ssr-demo#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "react-hot-loader": "^4.13.0",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  }
+}
