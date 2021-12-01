@@ -11,16 +11,17 @@ const AppString = ReactDOMServer.renderToString(ServerApp);
 console.log(AppString,'看看html')
 
 const htmlTemplate = fs.readFileSync(path.join(__dirname, '../../dist/index.html'), 'utf-8')
-console.log(htmlTemplate,'13---')
+
 // 现在把AppString插入到htmlTemplate里面去
 const newHtml = htmlTemplate.replace('<!-- app -->', AppString)
-
+console.log(newHtml,'13---')
 // 此时dist下的indexhtml是内联bundlejs的，res出去默认是内联不到的，需要讲dist开个静态服务才可以
 // 指定静态目录前缀为/public
 app.use('/public', express.static(path.join(__dirname, '../../dist')))
 
 // 路由识别
 app.get('/', (req, res) => {
+  console.log('进来了 get')
   res.send(newHtml);
 })
 

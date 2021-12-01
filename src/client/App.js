@@ -4,6 +4,7 @@ import {hot} from 'react-hot-loader/root';
 
 class App extends Component {
   render() {
+    console.log('APP渲染了 -----> ', this.props)
     return (
       <Fragment>
         <h1>ReactSSR showing</h1>
@@ -11,6 +12,10 @@ class App extends Component {
       </Fragment>
     )
   }
+}
+
+App.defaultProps = {
+  from: 'client'
 }
 
 export default hot(App);
